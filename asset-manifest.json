@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/NextRFID/static/css/main.6e9db792.css",
-    "main.js": "/NextRFID/static/js/main.51b98225.js",
+    "main.css": "/NextRFID/static/css/main.81c7b8b0.css",
+    "main.js": "/NextRFID/static/js/main.9d429bdb.js",
     "index.html": "/NextRFID/index.html",
-    "main.6e9db792.css.map": "/NextRFID/static/css/main.6e9db792.css.map",
-    "main.51b98225.js.map": "/NextRFID/static/js/main.51b98225.js.map"
+    "main.81c7b8b0.css.map": "/NextRFID/static/css/main.81c7b8b0.css.map",
+    "main.9d429bdb.js.map": "/NextRFID/static/js/main.9d429bdb.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e9db792.css",
-    "static/js/main.51b98225.js"
+    "static/css/main.81c7b8b0.css",
+    "static/js/main.9d429bdb.js"
   ]
 }
