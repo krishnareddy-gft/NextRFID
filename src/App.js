@@ -12,7 +12,7 @@ function App() {
             <li><a href="/contacts">Contact</a></li>
           </ul>
         </nav>
-        <h1>Welcome to React</h1>
+        <h1>Welcome to Reactsfsdjhfvsjvdfjhsdvfjhvsdjhfv</h1>
       </header>
       <main>
         <p>This is a simple React application.</p>
