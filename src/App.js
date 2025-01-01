@@ -29,7 +29,10 @@ function App() {
           </p>
         </div>
         <div className="content-right">
-          <img src="/rfid-illustration.png" alt="RFID Technology Illustration" />
+          <img 
+            src="/rfidimage.png" 
+            alt="RFID Technology Illustration" 
+          />
         </div>
       </main>
     </div>
