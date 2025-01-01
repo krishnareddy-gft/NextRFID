@@ -1,0 +1,146 @@
+.tags-detail-container {
+  min-height: 80vh;
+  background-color: #000000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Add scroll margin to account for fixed header */
+#tags-detail {
+  scroll-margin-top: 80px;
+}
+
+/* Update divider line to be more visible */
+.divider-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 242, 254, 0.8),
+    transparent
+  );
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+  transform: translateX(-50%);
+  animation: glowPulse 3s infinite;
+}
+
+/* Add glow pulse animation */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.tags-split-screen {
+  display: flex;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.tags-left, .tags-right {
+  flex: 0 1 500px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 242, 254, 0.1);
+}
+
+/* Add hover effects */
+.tags-left:hover, .tags-right:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(0, 242, 254, 0.2);
+  border-color: rgba(0, 242, 254, 0.2);
+}
+
+.tags-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+}
+
+.tags-table-container {
+  padding: 0.8rem;
+  border-radius: 12px;
+  background: rgba(0, 242, 254, 0.05);
+  border: 1px solid rgba(79, 172, 254, 0.1);
+}
+
+.tags-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  table-layout: fixed;
+}
+
+.tags-table th,
+.tags-table td {
+  padding: 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 50%;
+}
+
+.tags-table th {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(45deg, rgba(0, 242, 254, 0.1), rgba(79, 172, 254, 0.1));
+}
+
+.tags-table tr {
+  transition: all 0.3s ease;
+}
+
+.tags-table tr:hover {
+  background: rgba(0, 242, 254, 0.05);
+}
+
+/* Animation for page transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tags-left, .tags-right {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.tags-left {
+  animation-delay: 0.2s;
+}
+
+.tags-right {
+  animation-delay: 0.4s;
+} 
