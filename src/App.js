@@ -12,14 +12,14 @@ function App() {
             <header className="App-header">
               <nav className="main-nav">
                 <div className="logo">
-                  <a href="/">NextRFID</a>
+                  <Link to="/">NextRFID</Link>
                 </div>
                 <ul className="nav-links">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/services">Services</a></li>
-                  <li><a href="/technologies">Technologies</a></li>
-                  <li><a href="/about">About</a></li>
-                  <li><a href="/contact">Contact</a></li>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/services">Services</Link></li>
+                  <li><Link to="/technologies">Technologies</Link></li>
+                  <li><Link to="/about">About</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
                 </ul>
               </nav>
             </header>
@@ -94,6 +94,10 @@ function App() {
             </section>
           </div>
         } />
+        <Route path="/services" element={<div>Services Page</div>} />
+        <Route path="/technologies" element={<div>Technologies Page</div>} />
+        <Route path="/about" element={<div>About Page</div>} />
+        <Route path="/contact" element={<div>Contact Page</div>} />
         <Route path="/tags-detail" element={<TagsDetail />} />
       </Routes>
     </Router>
