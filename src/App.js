@@ -30,7 +30,7 @@ function App() {
         </div>
         <div className="content-right">
           <img 
-            src="/rfidimage.png" 
+            src="/rfidimage.png"
             alt="RFID Technology Illustration" 
           />
         </div>

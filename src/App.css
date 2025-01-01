@@ -126,23 +126,74 @@
   justify-content: center;
   align-items: center;
   max-width: 50%;
+  position: relative;
 }
 
 .content-right img {
   max-width: 100%;
   height: auto;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  border: none;
+  box-shadow: 
+    0 0 20px rgba(0, 242, 254, 0.4),
+    0 0 40px rgba(249, 212, 35, 0.2),
+    0 0 60px rgba(255, 78, 80, 0.1);
   animation: float 6s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+/* Modified glow wrapper to match image border */
+.content-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: 
+    0 0 15px rgba(0, 242, 254, 0.3),
+    0 0 30px rgba(249, 212, 35, 0.2),
+    0 0 45px rgba(255, 78, 80, 0.1);
+  z-index: 0;
+  animation: glowPulse 3s infinite;
+  pointer-events: none;
+}
+
+/* Update hover effects */
+.content-right:hover img {
+  transform: scale(1.02) translateY(-10px);
+  box-shadow: 
+    0 0 30px rgba(0, 242, 254, 0.6),
+    0 0 60px rgba(249, 212, 35, 0.3),
+    0 0 90px rgba(255, 78, 80, 0.2);
+}
+
+.content-right:hover::before {
+  box-shadow: 
+    0 0 25px rgba(0, 242, 254, 0.5),
+    0 0 50px rgba(249, 212, 35, 0.3),
+    0 0 75px rgba(255, 78, 80, 0.2);
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
+  0%, 100% {
+    transform: translateY(0);
   }
   50% {
     transform: translateY(-20px);
   }
-  100% {
-    transform: translateY(0px);
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
@@ -171,17 +222,5 @@
 @keyframes shine {
   100% {
     left: 200%;
-  }
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
