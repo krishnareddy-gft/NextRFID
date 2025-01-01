@@ -7,20 +7,13 @@
   justify-content: center;
   padding: 3rem 1rem;
   margin: 0;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 1;
+  transform: translateY(0);
   border-top: none;
 }
 
-/* Add scroll margin to account for fixed header */
-#tags-detail {
-  scroll-margin-top: 80px;
-  margin: 0;
-  padding: 0;
-  background-color: #000000;
-  border: none;
-}
+/* Remove scroll margin styles */
+/* Remove #tags-detail styles */
 
 /* Update divider line to be more visible */
 .divider-line {
@@ -74,11 +67,32 @@
   border-radius: 15px;
   border: 1px solid rgba(0, 242, 254, 0.1);
   margin: 1rem 0;
+  opacity: 0;
+  animation: smoothFadeIn 0.8s ease-out forwards;
 }
 
-/* Add hover effects */
+.tags-left {
+  animation-delay: 0.2s;
+}
+
+.tags-right {
+  animation-delay: 0.4s;
+}
+
+@keyframes smoothFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Update hover effect to not conflict with animation */
 .tags-left:hover, .tags-right:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) !important;
   box-shadow: 
     0 10px 30px rgba(0, 0, 0, 0.3),
     0 0 30px rgba(0, 242, 254, 0.2);
@@ -138,7 +152,7 @@
 }
 
 /* Animation for page transition */
-@keyframes fadeIn {
+@keyframes fadeInSmooth {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -150,15 +164,11 @@
 }
 
 .tags-left, .tags-right {
-  animation: fadeIn 0.8s ease-out;
-}
-
-.tags-left {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 .tags-right {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 
 /* Media Queries */
