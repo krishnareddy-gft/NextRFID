@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={
           <div className="App">
@@ -35,7 +35,7 @@ function App() {
               </div>
               <div className="content-right">
                 <img 
-                  src="/rfidimage.png"
+                  src={`${process.env.PUBLIC_URL}/rfidimage.png`}
                   alt="RFID Technology Illustration" 
                 />
               </div>

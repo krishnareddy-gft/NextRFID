@@ -5,15 +5,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
+  margin: 0;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 0.8s ease-out forwards;
+  border-top: none;
 }
 
 /* Add scroll margin to account for fixed header */
 #tags-detail {
   scroll-margin-top: 80px;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  border: none;
 }
 
 /* Update divider line to be more visible */
@@ -49,19 +55,25 @@
   width: 90%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
   gap: 2rem;
   justify-content: center;
+  flex-wrap: wrap;
+  background-color: #000000;
+  border: none;
 }
 
 .tags-left, .tags-right {
-  flex: 0 1 500px;
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 500px;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   border-radius: 15px;
   border: 1px solid rgba(0, 242, 254, 0.1);
+  margin: 1rem 0;
 }
 
 /* Add hover effects */
@@ -74,7 +86,7 @@
 }
 
 .tags-title {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
   background: linear-gradient(45deg, #00f2fe, #4facfe);
@@ -88,22 +100,26 @@
   border-radius: 12px;
   background: rgba(0, 242, 254, 0.05);
   border: 1px solid rgba(79, 172, 254, 0.1);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .tags-table {
   width: 100%;
   border-collapse: collapse;
   color: #e0e0e0;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   table-layout: fixed;
+  min-width: 280px;
 }
 
 .tags-table th,
 .tags-table td {
-  padding: 0.7rem;
+  padding: clamp(0.5rem, 2vw, 0.7rem);
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   width: 50%;
+  word-wrap: break-word;
 }
 
 .tags-table th {
@@ -143,4 +159,168 @@
 
 .tags-right {
   animation-delay: 0.4s;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .tags-detail-container {
+    min-height: auto;
+    padding: 2rem 0.5rem;
+    width: 100%;
+  }
+
+  .tags-split-screen {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    gap: 2rem;
+    flex-direction: column; /* Force column layout */
+    align-items: center;
+  }
+
+  .tags-left, .tags-right {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+    margin: 1rem 0;
+    padding: 1.5rem;
+  }
+
+  .tags-title {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    text-align: center;
+  }
+
+  .tags-table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tags-table {
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .tags-table th,
+  .tags-table td {
+    padding: 0.75rem;
+    white-space: normal; /* Allow text to wrap */
+    word-break: break-word;
+  }
+
+  /* Ensure both tables are equally visible */
+  .tags-right {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Disable hover effects on touch devices */
+  .tags-left:hover,
+  .tags-right:hover,
+  .tags-table tr:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tags-detail-container {
+    padding: 1rem 0.25rem;
+  }
+
+  .tags-split-screen {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .tags-left, .tags-right {
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .tags-table th,
+  .tags-table td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .tags-table td:last-child {
+    min-width: 120px; /* Ensure minimum width for content */
+  }
+
+  /* Hide divider line */
+  .divider-line {
+    display: none;
+  }
+}
+
+/* Fix for Safari backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .tags-left, .tags-right {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Ensure smooth scrolling works on all browsers */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Fix for iOS Safari momentum scrolling */
+.tags-table-container {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.tags-table-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Add horizontal scroll indicator */
+.tags-table-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tags-table-container:hover::after {
+  opacity: 1;
+}
+
+/* Ensure proper spacing between sections */
+#tags-detail {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Remove any bottom margins from the last elements */
+.tags-left:last-child, 
+.tags-right:last-child {
+  margin-bottom: 0;
+}
+
+/* Fix any potential overflow issues */
+.tags-table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure tables are fully visible */
+.tags-table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
 } 
