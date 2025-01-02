@@ -4,35 +4,6 @@
   padding-top: 80px;
 }
 
-.back-nav {
-  padding: 1rem 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.back-button {
-  display: inline-flex;
-  align-items: center;
-  color: #00f2fe;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.back-button span {
-  margin-right: 0.5rem;
-  font-size: 1.5rem;
-}
-
-.back-button:hover {
-  color: #4facfe;
-  transform: translateX(-5px);
-}
-
 .page-title {
   text-align: center;
   font-size: clamp(2rem, 5vw, 3rem);
@@ -142,10 +113,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .back-nav {
-    padding: 1rem;
-  }
-  
   .page-title {
     margin: 1rem 0;
     padding: 0 1rem;

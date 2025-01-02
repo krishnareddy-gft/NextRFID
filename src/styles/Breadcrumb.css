@@ -1,0 +1,63 @@
+.breadcrumb {
+  position: fixed;
+  left: 0;
+  top: 80px; /* Matches the header height */
+  bottom: 0;
+  width: 250px;
+  background: rgba(0, 0, 0, 0.9);
+  border-right: 1px solid rgba(0, 242, 254, 0.1);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.breadcrumb a {
+  color: #00f2fe;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.breadcrumb a:hover {
+  color: #4facfe;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+  background: rgba(0, 242, 254, 0.1);
+}
+
+.breadcrumb .separator {
+  color: #4facfe;
+  margin: 0 0.5rem;
+}
+
+.breadcrumb .current {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 242, 254, 0.1);
+  border-radius: 4px;
+}
+
+/* Adjust main content area to accommodate sidebar */
+.service-page, .tags-detail-page {
+  padding-left: 250px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .breadcrumb {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 242, 254, 0.1);
+  }
+
+  .service-page, .tags-detail-page {
+    padding-left: 0;
+  }
+} 

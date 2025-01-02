@@ -1,26 +1,21 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../styles/TagsDetail.css';
+import Breadcrumb from '../Breadcrumb';
 
 function ActiveRFIDTagsPage() {
-  const navigate = useNavigate();
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleBack = () => {
-    navigate('/rfid-tags', { replace: true });
-  };
+  const breadcrumbPaths = [
+    { label: 'RFID Tags', link: '/rfid-tags/overview' },
+    { label: 'Active RFID Tags' }
+  ];
 
   return (
     <div className="tags-detail-page">
-      <div className="back-nav">
-        <button onClick={handleBack} className="back-button">
-          <span>←</span> Back to RFID Tags
-        </button>
-      </div>
-      
+      <Breadcrumb paths={breadcrumbPaths} />
       <div className="tags-detail-content">
         <h1 className="detail-title">Active RFID Tags</h1>
         

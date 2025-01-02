@@ -1,13 +1,21 @@
 import React, { useEffect } from 'react';
 import '../../styles/ServicePage.css';
+import Breadcrumb from '../Breadcrumb';
 
 function AssetTrackingPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbPaths = [
+    { label: 'Products', link: '/' },
+    { label: 'Services', link: '/services' },
+    { label: 'Asset Tracking' }
+  ];
+
   return (
     <div className="service-page">
+      <Breadcrumb paths={breadcrumbPaths} />
       <div className="service-content">
         <div className="service-info">
           <h1 className="service-title">Asset Tracking Solutions</h1>
