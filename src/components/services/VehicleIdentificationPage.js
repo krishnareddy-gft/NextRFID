@@ -1,13 +1,22 @@
 import React, { useEffect } from 'react';
 import '../../styles/ServicePage.css';
+import Breadcrumb from '../Breadcrumb';
+import vehicleIdImg from '../../assets/images/vehicle-identification.png';
 
 function VehicleIdentificationPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbPaths = [
+    { label: 'Products', link: '/' },
+    { label: 'Services', link: '/services' },
+    { label: 'Vehicle Identification' }
+  ];
+
   return (
     <div className="service-page">
+      <Breadcrumb paths={breadcrumbPaths} />
       <div className="service-content">
         <div className="service-info">
           <h1 className="service-title">Automated Vehicle Identification</h1>
@@ -42,7 +51,11 @@ function VehicleIdentificationPage() {
           </div>
         </div>
         <div className="service-image">
-          <div className="placeholder-image">Vehicle Identification</div>
+          <img 
+            src={vehicleIdImg}
+            alt="Vehicle Identification System"
+            className="service-img"
+          />
         </div>
       </div>
     </div>

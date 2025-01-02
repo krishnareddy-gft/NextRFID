@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import '../../styles/ServicePage.css';
 import Breadcrumb from '../Breadcrumb';
+import assetTrackingImg from '../../assets/images/asset-tracking.png';
 
 function AssetTrackingPage() {
   useEffect(() => {
@@ -50,7 +51,11 @@ function AssetTrackingPage() {
           </div>
         </div>
         <div className="service-image">
-          <div className="placeholder-image">Asset Tracking</div>
+          <img 
+            src={assetTrackingImg}
+            alt="Asset Tracking Solution"
+            className="service-img"
+          />
         </div>
       </div>
     </div>

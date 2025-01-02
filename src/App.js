@@ -21,7 +21,6 @@ function App() {
             <ul className="nav-links">
               <li><Link to="/">Home</Link></li>
               <li><ServicesDropdown /></li>
-              <li><Link to="/technologies">Technologies</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
@@ -92,7 +91,6 @@ function App() {
           <Route path="/services/asset-tracking" element={<AssetTrackingPage />} />
           <Route path="/services/inventory-tracking" element={<InventoryTrackingPage />} />
           <Route path="/services/vehicle-identification" element={<VehicleIdentificationPage />} />
-          <Route path="/technologies" element={<div>Technologies Page</div>} />
           <Route path="/about" element={<div>About Page</div>} />
           <Route path="/contact" element={<div>Contact Page</div>} />
           <Route path="/rfid-tags/active" element={<ActiveRFIDTagsPage />} />

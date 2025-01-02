@@ -1,13 +1,22 @@
 import React, { useEffect } from 'react';
 import '../../styles/ServicePage.css';
+import Breadcrumb from '../Breadcrumb';
+import inventoryTrackingImg from '../../assets/images/inventory-tracking.png';
 
 function InventoryTrackingPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbPaths = [
+    { label: 'Products', link: '/' },
+    { label: 'Services', link: '/services' },
+    { label: 'Inventory Tracking' }
+  ];
+
   return (
     <div className="service-page">
+      <Breadcrumb paths={breadcrumbPaths} />
       <div className="service-content">
         <div className="service-info">
           <h1 className="service-title">Inventory Tracking Solutions</h1>
@@ -42,7 +51,11 @@ function InventoryTrackingPage() {
           </div>
         </div>
         <div className="service-image">
-          <div className="placeholder-image">Inventory Tracking</div>
+          <img 
+            src={inventoryTrackingImg}
+            alt="Inventory Tracking Solution"
+            className="service-img"
+          />
         </div>
       </div>
     </div>
