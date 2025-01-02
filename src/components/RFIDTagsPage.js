@@ -57,12 +57,12 @@ function RFIDTagsPage() {
         <div className="tags-types">
           <h2 className="section-title">Types of RFID Tags</h2>
           <div className="types-container">
-            <Link to="/rfid-tags" className="type-card">
+            <Link to="/rfid-tags/active" className="type-card">
               <h3>Active RFID Tags</h3>
               <p>Battery-powered tags with extended range and advanced capabilities</p>
               <span className="learn-more">View Specifications →</span>
             </Link>
-            <Link to="/rfid-tags" className="type-card">
+            <Link to="/rfid-tags/passive" className="type-card">
               <h3>Passive RFID Tags</h3>
               <p>Cost-effective tags powered by reader energy</p>
               <span className="learn-more">View Specifications →</span>

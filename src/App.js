@@ -1,6 +1,12 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import RFIDTagsPage from './components/RFIDTagsPage';
+import ServicesDropdown from './components/ServicesDropdown';
+import AssetTrackingPage from './components/services/AssetTrackingPage';
+import InventoryTrackingPage from './components/services/InventoryTrackingPage';
+import VehicleIdentificationPage from './components/services/VehicleIdentificationPage';
+import ActiveRFIDTagsPage from './components/tags/ActiveRFIDTagsPage';
+import PassiveRFIDTagsPage from './components/tags/PassiveRFIDTagsPage';
 import './App.css';
 
 function App() {
@@ -14,7 +20,7 @@ function App() {
             </div>
             <ul className="nav-links">
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/services">Services</Link></li>
+              <li><ServicesDropdown /></li>
               <li><Link to="/technologies">Technologies</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact</Link></li>
@@ -83,10 +89,14 @@ function App() {
             </>
           } />
           <Route path="/rfid-tags/overview" element={<RFIDTagsPage />} />
-          <Route path="/services" element={<div>Services Page</div>} />
+          <Route path="/services/asset-tracking" element={<AssetTrackingPage />} />
+          <Route path="/services/inventory-tracking" element={<InventoryTrackingPage />} />
+          <Route path="/services/vehicle-identification" element={<VehicleIdentificationPage />} />
           <Route path="/technologies" element={<div>Technologies Page</div>} />
           <Route path="/about" element={<div>About Page</div>} />
           <Route path="/contact" element={<div>Contact Page</div>} />
+          <Route path="/rfid-tags/active" element={<ActiveRFIDTagsPage />} />
+          <Route path="/rfid-tags/passive" element={<PassiveRFIDTagsPage />} />
         </Routes>
       </div>
     </Router>
