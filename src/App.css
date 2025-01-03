@@ -43,6 +43,7 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
   background: linear-gradient(45deg, #FF4E50, #F9D423, #00f2fe);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 20px rgba(255, 78, 80, 0.6);
@@ -104,6 +105,7 @@ body {
   font-weight: 700;
   margin-bottom: 1rem;
   background: linear-gradient(45deg, #00f2fe, #4facfe);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
@@ -115,6 +117,7 @@ body {
   margin-bottom: 2rem;
   line-height: 1.2;
   background: linear-gradient(45deg, #e0e0e0, #ffffff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
@@ -249,6 +252,7 @@ body {
   font-weight: 700;
   margin-bottom: 1rem;
   background: linear-gradient(45deg, #00f2fe, #4facfe);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
@@ -315,6 +319,7 @@ body {
 .product-title {
   font-size: 1.8rem;
   background: linear-gradient(45deg, #00f2fe, #4facfe);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.5rem;
