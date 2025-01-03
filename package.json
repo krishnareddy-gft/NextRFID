@@ -1,7 +1,7 @@
 {
   "name": "krishna-next-rfid",
   "version": "1.0.0",
-  "homepage": "https://yourusername.github.io/krishnaNextRFID",
+  "homepage": "https://krishna2808.github.io/krishnaNextRFID",
   "private": true,
   "dependencies": {
     "gh-pages": "^6.2.0",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "krishnaNextRFID -d build",
+    "deploy": "gh-pages -b krishnaNextRFID -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

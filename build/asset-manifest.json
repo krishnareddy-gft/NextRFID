@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/NextRFID/static/css/main.81c7b8b0.css",
-    "main.js": "/NextRFID/static/js/main.9d429bdb.js",
-    "index.html": "/NextRFID/index.html",
-    "main.81c7b8b0.css.map": "/NextRFID/static/css/main.81c7b8b0.css.map",
-    "main.9d429bdb.js.map": "/NextRFID/static/js/main.9d429bdb.js.map"
+    "main.css": "/krishnaNextRFID/static/css/main.d955e303.css",
+    "main.js": "/krishnaNextRFID/static/js/main.2db2e02f.js",
+    "static/media/asset-tracking.png": "/krishnaNextRFID/static/media/asset-tracking.626f17280d5fd9ceefa9.png",
+    "static/media/inventory-tracking.png": "/krishnaNextRFID/static/media/inventory-tracking.d5ff8cc349bce6f1c6fd.png",
+    "static/media/vehicle-identification.png": "/krishnaNextRFID/static/media/vehicle-identification.22a1e992119b762bc7b6.png",
+    "index.html": "/krishnaNextRFID/index.html",
+    "main.d955e303.css.map": "/krishnaNextRFID/static/css/main.d955e303.css.map",
+    "main.2db2e02f.js.map": "/krishnaNextRFID/static/js/main.2db2e02f.js.map"
   },
   "entrypoints": [
-    "static/css/main.81c7b8b0.css",
-    "static/js/main.9d429bdb.js"
+    "static/css/main.d955e303.css",
+    "static/js/main.2db2e02f.js"
   ]
 }
