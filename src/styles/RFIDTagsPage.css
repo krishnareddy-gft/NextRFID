@@ -1,0 +1,139 @@
+.rfid-tags-page {
+  min-height: 100vh;
+  background-color: #000000;
+  padding-top: 80px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 2rem 0;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+}
+
+.tags-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.tags-intro {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(0, 242, 254, 0.1);
+}
+
+.intro-text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin: 3rem 0 2rem;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 242, 254, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 242, 254, 0.3);
+}
+
+.feature-card h3 {
+  color: #00f2fe;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.types-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.type-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 242, 254, 0.1);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.type-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 242, 254, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.type-card h3 {
+  color: #00f2fe;
+  margin-bottom: 1rem;
+}
+
+.type-card p {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.learn-more {
+  color: #4facfe;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  .page-title {
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+
+  .tags-intro {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .types-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+} 

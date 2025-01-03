@@ -1,0 +1,98 @@
+.services-dropdown {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-top: -2px;
+}
+
+.dropdown-trigger {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin: 0;
+  line-height: 1;
+}
+
+.dropdown-trigger:hover {
+  color: #00f2fe;
+  text-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+  background: rgba(0, 242, 254, 0.1);
+  border-radius: 4px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 4px;
+  margin-top: 0;
+  padding: 0.5rem 0;
+  z-index: 1000;
+  animation: dropdownFade 0.3s ease;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(0, 242, 254, 0.1);
+  color: #00f2fe;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services-dropdown {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 0;
+  }
+
+  .dropdown-trigger {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .dropdown-menu a {
+    padding: 1rem;
+    text-align: center;
+  }
+} 

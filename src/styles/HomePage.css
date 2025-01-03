@@ -1,0 +1,354 @@
+.home-page {
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #000000;
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.main-logo {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.subheading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #e0e0e0, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.company-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.technologies-wrapper {
+  min-height: 60vh;
+  width: 100%;
+  background-color: #000000;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+  margin: 2rem 0;
+}
+
+.products-section {
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+}
+
+.products-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.products-subtitle {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.products-container {
+  display: flex;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 242, 254, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+}
+
+.product-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.product-card p {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.read-more-btn {
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.read-more-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .main-logo {
+    font-size: 2.5rem;
+  }
+
+  .subheading {
+    font-size: 1.8rem;
+  }
+
+  .company-description {
+    font-size: 1rem;
+  }
+
+  .technologies-wrapper {
+    min-height: 40vh;
+    padding: 1rem 0;
+    margin: 1rem 0;
+  }
+
+  .products-section {
+    padding: 4rem 1rem;
+  }
+
+  .products-title {
+    font-size: 2.5rem;
+  }
+
+  .product-card {
+    padding: 1.5rem;
+  }
+}
+
+.technologies-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: transparent;
+}
+
+.tech-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tech-subtitle {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+.tech-scroll-container {
+  overflow-x: auto;
+  padding: 2rem 0;
+  margin: 0 -2rem;
+}
+
+.tech-scroll {
+  display: flex;
+  gap: 4rem;
+  padding: 0 2rem;
+  justify-content: center;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tech-icon {
+  width: 48px;
+  height: 48px;
+  color: #00f2fe;
+  transition: all 0.3s ease;
+}
+
+.tech-name {
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.tech-item:hover .tech-icon {
+  color: #4facfe;
+  transform: scale(1.1);
+}
+
+.tech-item:hover .tech-name {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .tech-title {
+    font-size: 2.5rem;
+  }
+
+  .tech-subtitle {
+    font-size: 1rem;
+  }
+
+  .tech-scroll {
+    gap: 2rem;
+  }
+
+  .tech-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.tech-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: transparent;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+}
+
+.tech-subtitle {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+.tech-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.tech-scroll {
+  display: flex;
+  gap: 4rem;
+  animation: scroll 40s linear infinite;
+  padding: 0 2rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-width: 100px;
+}
+
+.tech-icon {
+  width: 48px;
+  height: 48px;
+  color: #00f2fe;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.tech-name {
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover .tech-icon {
+  color: #4facfe;
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.tech-item:hover .tech-name {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 4rem));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tech-title {
+    font-size: 2.5rem;
+  }
+
+  .tech-subtitle {
+    font-size: 1rem;
+  }
+
+  .tech-scroll {
+    gap: 2rem;
+  }
+
+  .tech-icon {
+    width: 40px;
+    height: 40px;
+  }
+} 
