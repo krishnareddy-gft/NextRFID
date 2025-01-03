@@ -74,6 +74,54 @@ function AboutPage() {
           software development, and business solutions. We're united by our passion for innovation 
           and commitment to excellence.
         </p>
+
+        <div className="team-content">
+          <div className="team-story">
+            <h3>Our Journey</h3>
+            <p>
+              Founded in 2008 by a group of RFID technology pioneers, NextRFID began with a vision 
+              to revolutionize asset management. Our founding team combined expertise from leading 
+              technology companies and research institutions across Australia.
+            </p>
+            <p>
+              Starting with a small team of five specialists, we've grown to over 50 professionals 
+              across engineering, software development, customer success, and business development. 
+              Our team members have backgrounds from companies like Cisco, IBM, and leading 
+              Australian universities.
+            </p>
+          </div>
+
+          <div className="team-expertise">
+            <h3>Core Expertise</h3>
+            <div className="expertise-grid">
+              <div className="expertise-card">
+                <h4>Engineering Team</h4>
+                <p>
+                  Led by Dr. Sarah Chen, our engineering team brings 15+ years of experience in 
+                  RFID hardware design and optimization. The team has contributed to multiple 
+                  patents in RFID technology.
+                </p>
+              </div>
+              <div className="expertise-card">
+                <h4>Software Development</h4>
+                <p>
+                  Our software team, headed by James O'Connor, specializes in creating 
+                  user-friendly interfaces and robust backend systems that handle millions 
+                  of RFID transactions daily.
+                </p>
+              </div>
+              <div className="expertise-card">
+                <h4>Solutions Architecture</h4>
+                <p>
+                  Michael Thompson leads our solutions team, bringing experience from 
+                  implementing RFID systems across various industries including healthcare, 
+                  logistics, and manufacturing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="team-stats">
           <div className="stat-card">
             <h3>50+</h3>

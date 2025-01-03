@@ -5,38 +5,56 @@
 }
 
 .service-content {
-  display: flex;
-  flex-direction: row;
+  position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
-  gap: 4rem;
-  align-items: flex-start;
-  justify-content: center;
+  padding: 4rem 2rem;
   min-height: calc(100vh - 80px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.service-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
 }
 
 .service-info {
-  flex: 1;
-  text-align: left;
-  max-width: 600px;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
 }
 
 .service-title {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: 2.5rem;
+  color: #ffffff;
   margin-bottom: 2rem;
+  text-align: center;
   background: linear-gradient(45deg, #00f2fe, #4facfe);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
 }
 
 .service-description {
   color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 2rem;
   font-size: 1.1rem;
-  line-height: 1.6;
 }
 
 /* Update features and benefits container */
@@ -112,99 +130,25 @@
 }
 
 .service-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 500px;
-  padding-top: 2rem;
-  padding-left: 0;
-}
-
-.service-img {
-  width: 100%;
-  height: auto;
-  max-height: 350px;
-  object-fit: contain;
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
-  transition: all 0.3s ease;
-}
-
-.service-img:hover {
-  box-shadow: 0 0 40px rgba(0, 242, 254, 0.3);
-  transform: scale(1.02);
-}
-
-@media screen and (max-width: 1200px) {
-  .service-content {
-    padding: 1rem;
-    gap: 2rem;
-  }
-
-  .service-info {
-    padding: 1rem;
-  }
-
-  .placeholder-image {
-    height: 300px;
-  }
+  display: none;
 }
 
 @media screen and (max-width: 968px) {
   .service-content {
-    flex-direction: column-reverse;
+    padding: 3rem 1rem;
+    background-attachment: scroll;
   }
 
-  .service-info, .service-image {
-    max-width: 100%;
+  .service-info {
+    padding: 1.5rem;
   }
 
   .service-title {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
   }
 
   .service-description {
     font-size: 1rem;
-  }
-
-  .placeholder-image {
-    height: 250px;
-    font-size: 1.2rem;
-  }
-
-  .service-image {
-    padding-top: 0;
-    padding-left: 0;
-    margin-bottom: 2rem;
-  }
-
-  .features-benefits-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .features-benefits-container::before {
-    width: 80%;
-    height: 2px;
-    left: 10%;
-    top: 50%;
-    background: linear-gradient(
-      to right,
-      transparent,
-      rgba(0, 242, 254, 0.8),
-      transparent
-    );
-  }
-
-  .service-features, .service-benefits {
-    width: 100%;
-    min-width: unset;
-  }
-
-  .service-img {
-    max-height: 300px;
   }
 }
 
