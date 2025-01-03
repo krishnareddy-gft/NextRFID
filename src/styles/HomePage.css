@@ -466,12 +466,17 @@
   background: linear-gradient(135deg, #000000, #1a1a1a);
   color: #ffffff;
   padding: 4rem 2rem 2rem;
-  border-top: 1px solid rgba(0, 242, 254, 0.1);
+  border-top: 1px solid rgba(0, 242, 254, 0.2);
+  position: relative;
+  z-index: 10;
+  margin-top: 4rem;
+  width: 100%;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .footer-grid {
@@ -488,10 +493,17 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+
+.footer-brand p,
+.footer-locations p,
+.footer-links a {
+  color: #e0e0e0;
+  opacity: 0.9;
 }
 
 .footer-brand p {
-  color: #e0e0e0;
   margin-bottom: 1rem;
 }
 
@@ -541,6 +553,7 @@
 
 .footer-links a:hover {
   color: #00f2fe;
+  opacity: 1;
 }
 
 .footer-bottom {
@@ -572,6 +585,7 @@
 
   .footer {
     padding: 3rem 1rem 1rem;
+    margin-top: 2rem;
   }
 }
 
