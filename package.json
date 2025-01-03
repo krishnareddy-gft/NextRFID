@@ -1,6 +1,7 @@
 {
-  "name": "reactapp",
+  "name": "krishna-next-rfid",
   "version": "1.0.0",
+  "homepage": "https://yourusername.github.io/krishnaNextRFID",
   "private": true,
   "dependencies": {
     "gh-pages": "^6.2.0",
@@ -10,12 +11,12 @@
     "react-scripts": "5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && cp build/index.html build/404.html",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "krishnaNextRFID -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -28,6 +29,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://krishnareddy-gft.github.io/NextRFID/#"
+  }
 }
