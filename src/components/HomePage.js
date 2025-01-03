@@ -98,25 +98,35 @@ function HomePage() {
         </p>
         <div className="products-container">
           <div className="product-card">
-            <h3 className="product-title">RFID Reader</h3>
-            <p className="product-description">
-              High-performance RFID readers designed for seamless asset tracking. 
-              Our readers offer superior read ranges, multi-tag processing, and 
-              real-time data capture capabilities.
-            </p>
-            <button className="read-more-btn">Learn More</button>
+            <div className="product-image">
+              <img src="/images/rfid-reader.jpg" alt="RFID Reader" />
+            </div>
+            <div className="product-content">
+              <h3 className="product-title">RFID Reader</h3>
+              <p className="product-description">
+                High-performance RFID readers designed for seamless asset tracking. 
+                Our readers offer superior read ranges, multi-tag processing, and 
+                real-time data capture capabilities.
+              </p>
+              <button className="read-more-btn">Learn More</button>
+            </div>
           </div>
           
           <div className="product-card">
-            <h3 className="product-title">RFID Tags</h3>
-            <p className="product-description">
-              Advanced RFID tags engineered for durability and reliability. 
-              Available in various form factors, our tags ensure consistent 
-              performance across diverse environmental conditions.
-            </p>
-            <Link to="/rfid-tags/overview" className="read-more-btn">
-              Learn More
-            </Link>
+            <div className="product-image">
+              <img src="/images/rfid-tags.jpg" alt="RFID Tags" />
+            </div>
+            <div className="product-content">
+              <h3 className="product-title">RFID Tags</h3>
+              <p className="product-description">
+                Advanced RFID tags engineered for durability and reliability. 
+                Available in various form factors, our tags ensure consistent 
+                performance across diverse environmental conditions.
+              </p>
+              <Link to="/rfid-tags/overview" className="read-more-btn">
+                Learn More
+              </Link>
+            </div>
           </div>
         </div>
       </section>

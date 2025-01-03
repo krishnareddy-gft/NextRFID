@@ -1,42 +1,69 @@
 .contact-page {
-  background-color: #ffffff;
+  background-color: #000000;
   min-height: 100vh;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-page::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, 
+    rgba(0, 242, 254, 0.1) 0%,
+    rgba(79, 172, 254, 0.05) 25%,
+    transparent 70%);
+  animation: rotate 30s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg) translate(-25%, -25%); }
+  to { transform: rotate(360deg) translate(-25%, -25%); }
 }
 
 .contact-hero {
-  background: linear-gradient(135deg, #000000, #1a1a1a);
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(26, 26, 26, 0.9));
   padding: 120px 2rem 80px;
   text-align: center;
-  position: relative;
-}
-
-.contact-hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background: linear-gradient(to bottom, transparent, #ffffff);
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, transparent, #00f2fe, #4facfe, transparent) 1;
+  backdrop-filter: blur(10px);
 }
 
 .contact-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  color: #ffffff;
-  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00f2fe, #4facfe, #00f2fe);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  text-shadow: 0 0 30px rgba(79, 172, 254, 0.5);
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
 }
 
 .contact-subtitle {
   font-size: clamp(1.2rem, 3vw, 1.5rem);
-  color: #00f2fe;
+  color: #ffffff;
+  opacity: 0.9;
   max-width: 600px;
   margin: 0 auto;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
 }
 
 .contact-info-section {
+  position: relative;
   padding: 6rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .contact-cards {
@@ -47,15 +74,40 @@
 
 .contact-card {
   padding: 2rem;
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 20px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.contact-card:hover::before {
+  left: 100%;
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
+  border-color: rgba(0, 242, 254, 0.5);
 }
 
 .contact-icon {
@@ -63,29 +115,44 @@
   height: 48px;
   margin: 0 auto 1rem;
   color: #00f2fe;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.3));
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.2) rotate(360deg);
+  color: #4facfe;
 }
 
 .contact-card h3 {
   font-size: 1.5rem;
-  color: #1a1a1a;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
 .contact-card p {
-  color: #4a4a4a;
+  color: #e0e0e0;
   line-height: 1.6;
+  opacity: 0.8;
 }
 
 .locations-section {
+  position: relative;
   padding: 6rem 2rem;
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(26, 26, 26, 0.8));
   text-align: center;
+  backdrop-filter: blur(10px);
+  z-index: 1;
 }
 
 .locations-section h2 {
   font-size: 2.5rem;
-  color: #1a1a1a;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 3rem;
+  text-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
 }
 
 .locations-grid {
@@ -97,10 +164,18 @@
 }
 
 .location-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 20px;
   padding: 2rem;
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.location-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
+  border-color: rgba(0, 242, 254, 0.5);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .location-card h3 {
@@ -110,37 +185,49 @@
 }
 
 .location-card p {
-  color: #4a4a4a;
+  color: #e0e0e0;
   line-height: 1.8;
+  opacity: 0.8;
 }
 
 .contact-cta {
+  position: relative;
   padding: 6rem 2rem;
   text-align: center;
-  background: linear-gradient(135deg, #000000, #1a1a1a);
-  color: #ffffff;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(26, 26, 26, 0.9));
+  border-top: 2px solid;
+  border-image: linear-gradient(90deg, transparent, #00f2fe, #4facfe, transparent) 1;
+  backdrop-filter: blur(10px);
+  z-index: 1;
 }
 
 .contact-cta h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-}
-
-.contact-cta p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  opacity: 0.9;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
 }
 
 .company-details {
   margin-top: 3rem;
-  opacity: 0.8;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 20px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.company-details p {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+.company-details:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
+  border-color: rgba(0, 242, 254, 0.5);
 }
 
 @media screen and (max-width: 768px) {
