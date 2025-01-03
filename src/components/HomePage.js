@@ -54,32 +54,42 @@ function HomePage() {
     }
   ];
 
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('.contact-section');
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="home-page">
-      <div className="hero-section">
+      <section className="hero-section">
         <div className="hero-content">
-          <h1 className="main-logo">RFID Solutions</h1>
-          <h2 className="subheading">Transforming Asset Management</h2>
+          <h1 className="main-logo">NextRFID</h1>
+          <h2 className="subheading">Innovative RFID Solutions</h2>
           <p className="company-description">
-            Leading provider of innovative RFID technology solutions for efficient asset tracking and management.
+            Leading the future of asset tracking and management with cutting-edge RFID technology
           </p>
-        </div>
-      </div>
-
-      <section className="tech-section">
-        <h2 className="tech-title">Technologies</h2>
-        <p className="tech-subtitle">Empowering Innovation Through Advanced Technologies</p>
-        <div className="tech-container">
-          <div className="tech-scroll">
-            {[...technologies, ...technologies].map((tech, index) => (
-              <div key={index} className="tech-item">
-                {tech.icon}
-                <span className="tech-name">{tech.name}</span>
-              </div>
-            ))}
-          </div>
+          <button onClick={scrollToContact} className="contact-button">
+            Contact Us
+          </button>
         </div>
       </section>
+
+      <div className="technologies-wrapper">
+        <section className="technologies-section">
+          <h2 className="tech-title">Technologies</h2>
+          <p className="tech-subtitle">Empowering Innovation Through Advanced Technologies</p>
+          <div className="tech-container">
+            <div className="tech-scroll">
+              {[...technologies, ...technologies].map((tech, index) => (
+                <div key={index} className="tech-item">
+                  {tech.icon}
+                  <span className="tech-name">{tech.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
 
       <section className="products-section">
         <h2 className="products-title">Products</h2>
@@ -110,6 +120,88 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      <section className="contact-section" id="contact">
+        <h2 className="contact-title">Get in Touch</h2>
+        <p className="contact-subtitle">
+          Ready to transform your asset management? Let's talk about your needs.
+        </p>
+        <div className="contact-grid">
+          <div className="contact-info">
+            <div className="contact-card">
+              <div className="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+              </div>
+              <h3>Visit Us</h3>
+              <p>Level 32, 200 George St<br/>Sydney NSW 2000</p>
+            </div>
+            <div className="contact-card">
+              <div className="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+              <h3>Email Us</h3>
+              <p>info@nextrfid.com.au</p>
+            </div>
+            <div className="contact-card">
+              <div className="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7z"/>
+                </svg>
+              </div>
+              <h3>Call Us</h3>
+              <p>1300 NEXTRFID</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-grid">
+            <div className="footer-brand">
+              <h3 className="footer-logo">NextRFID</h3>
+              <p>Transforming Asset Management Through Innovation</p>
+              <p className="company-details">ABN: 12 345 678 901</p>
+            </div>
+            
+            <div className="footer-locations">
+              <h4>Our Locations</h4>
+              <div className="locations-grid">
+                <div className="location">
+                  <h5>NSW</h5>
+                  <p>Sydney CBD<br/>North Sydney<br/>Parramatta</p>
+                </div>
+                <div className="location">
+                  <h5>VIC</h5>
+                  <p>Melbourne CBD<br/>South Melbourne</p>
+                </div>
+                <div className="location">
+                  <h5>QLD</h5>
+                  <p>Brisbane CBD<br/>Gold Coast</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/products">Products</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/privacy">Privacy Policy</Link></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="footer-bottom">
+            <p>&copy; 2024 NextRFID. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

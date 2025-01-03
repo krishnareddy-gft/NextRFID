@@ -27,6 +27,7 @@
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 2rem;
   background: linear-gradient(45deg, #00f2fe, #4facfe);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);

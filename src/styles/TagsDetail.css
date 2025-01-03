@@ -15,6 +15,7 @@
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 2rem;
   background: linear-gradient(45deg, #00f2fe, #4facfe);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
@@ -108,5 +109,68 @@
   .tag-description {
     font-size: 1.1rem;
     padding: 0 1rem;
+  }
+}
+
+.specs-table {
+  margin: 3rem 0;
+  overflow-x: auto;
+}
+
+.specs-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+}
+
+.specs-table th,
+.specs-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 242, 254, 0.1);
+}
+
+.specs-table th {
+  background: rgba(0, 242, 254, 0.1);
+  color: #00f2fe;
+  font-weight: 600;
+}
+
+.specs-table tr:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.detailed-info {
+  margin: 3rem 0;
+}
+
+.detailed-info h2 {
+  color: #00f2fe;
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+}
+
+.detailed-info p {
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .specs-table {
+    margin: 2rem -1rem;
+    padding: 0 1rem;
+  }
+  
+  .specs-table th,
+  .specs-table td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .detailed-info h2 {
+    font-size: 1.5rem;
   }
 } 

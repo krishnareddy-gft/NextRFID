@@ -7,6 +7,8 @@ import InventoryTrackingPage from './components/services/InventoryTrackingPage';
 import VehicleIdentificationPage from './components/services/VehicleIdentificationPage';
 import ActiveRFIDTagsPage from './components/tags/ActiveRFIDTagsPage';
 import PassiveRFIDTagsPage from './components/tags/PassiveRFIDTagsPage';
+import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
 import './App.css';
 
 function App() {
@@ -91,8 +93,8 @@ function App() {
           <Route path="/services/asset-tracking" element={<AssetTrackingPage />} />
           <Route path="/services/inventory-tracking" element={<InventoryTrackingPage />} />
           <Route path="/services/vehicle-identification" element={<VehicleIdentificationPage />} />
-          <Route path="/about" element={<div>About Page</div>} />
-          <Route path="/contact" element={<div>Contact Page</div>} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/rfid-tags/active" element={<ActiveRFIDTagsPage />} />
           <Route path="/rfid-tags/passive" element={<PassiveRFIDTagsPage />} />
         </Routes>
