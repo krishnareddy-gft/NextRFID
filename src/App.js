@@ -69,7 +69,7 @@ function App() {
                     <p className="product-description">
                       Advanced RFID tags engineered for durability and reliability. 
                       Available in various form factors, our tags ensure consistent 
-                      performance across diverse environmental conditions.
+                      performance across diverse environmental conditions..
                     </p>
                     <Link to="/rfid-tags/overview" className="read-more-btn">
                       Learn More
